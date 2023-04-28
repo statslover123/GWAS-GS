@@ -3,7 +3,7 @@ library(dplyr)
 library(tidyverse)
 library(BGLR)
 setwd("/home/peter.schmuker/LEEROY/")
-
+#kernel code from A guide for kernel generalized regression methods for genomic-enabled prediction
 Kernel_computation=function(X,name, degree, nL){
   
   p=ncol(X)
@@ -174,7 +174,7 @@ K3<-exp(-2*D)
 df2 = data.frame(model = "starter", cor=0, rmse = 1)
 trait22$Maturity<-scale(trait22$Maturity)
 
-for(i in 1:25) {
+for(i in 1:50) {
 n=nrow(gene22)
 print(n)
 testing=sample(n,round(n/5),replace=F)
